@@ -5,6 +5,7 @@ using namespace std;
 /** try 3
  * 
 using cout << "\n"
+https://yechoi.tistory.com/48
 */ 
 
 int main(){
