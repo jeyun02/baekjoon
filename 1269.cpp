@@ -1,37 +1,44 @@
+// 대칭 차집합
 #include <iostream>
-#include <list>
+
 using namespace std;
 
 int main(){
    ios::sync_with_stdio(false);
    cin.tie(NULL);
    cout.tie(NULL);
-   
+
    // creating set A and set B
    int n_a, n_b;
+   int count = 0;
    cin >> n_a >> n_b;
-   list<int> A;
+   int A[n_a];
    
    // input set A
    for (int i = 0; i < n_a; i++){
-      int input;
-      cin >> input;
-      A.push_back(input);
+      cin >> A[i];
    }
 
    // input set B and make A to the unique set of A and B.
    for (int i = 0; i < n_b; i++){
       int input;
       cin >> input;
-      list<int>::iterator iter = A.begin();
-      int before_size = A.size();
-      A.remove(input); // making A-B
-      if(before_size == A.size()){
-         A.push_back(input); // making B-A
+      
+      if( input < A[0] || input > A[-1] ) {
+         count ++;
+         continue;
       }
+      for ( int j =0; j<n_a; j++){
+         
+      }
+      int j = 0;
+      while( input != A[j] && j < n_a) j++;
+      count++;
+      
+
    }
 
    // output
-   cout << A.size();
+   cout << count;
    return 0;
 }
