@@ -1,8 +1,12 @@
 #include <iostream>
-
+#include <list>
 using namespace std;
 
 int main(){
+   ios::sync_with_stdio(false);
+   cin.tie(NULL);
+   cout.tie(NULL);
+   
    // creating set A and set B
    int n_a, n_b;
    cin >> n_a >> n_b;
