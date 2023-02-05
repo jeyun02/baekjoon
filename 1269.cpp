@@ -1,32 +1,33 @@
 #include <iostream>
-
+#include <list>
 using namespace std;
 
 int main(){
    // creating set A and set B
    int n_a, n_b;
    cin >> n_a >> n_b;
+   list<int> A;
    
-   int arr_a[n_a]={0};
+   // input set A
    for (int i = 0; i < n_a; i++){
       int input;
       cin >> input;
-      arr_a[i] = input;
+      A.push_back(input);
    }
 
-   int arr_b[n_b]={0};
+   // input set B and make A to the unique set of A and B.
    for (int i = 0; i < n_b; i++){
       int input;
       cin >> input;
-      arr_b[i] = input;
+      list<int>::iterator iter = A.begin();
+      int before_size = A.size();
+      A.remove(input); // making A-B
+      if(before_size == A.size()){
+         A.push_back(input); // making B-A
+      }
    }
-   
-   // 
-   // finding the number of (A - B)
-   int only_A = 0;
-   int only_B = 0;
-   for (int i = 0; i < n_a; i++){
-      arr_a[i]
-   }
+
+   // output
+   cout << A.size();
    return 0;
 }
