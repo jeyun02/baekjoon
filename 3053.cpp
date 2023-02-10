@@ -7,10 +7,13 @@ using namespace std;
 /** creating approximate value of pi.*/
 long double creating_eucli_area(int radius){
    long double innersum = 0;
-   for(int i = 1; i < 1000000000; i++){
-      innersum += 1 / pow(i,2);
+   for(int i = 1; i < 10000000; i++){
+      if (i % 2 == 1) 
+         innersum += (1 /(long double)(2*i - 1));
+      else 
+         innersum -= (1 /(long double)(2*i - 1));
    }
-   return sqrt(6 * innersum) * pow(radius, 2);
+   return (4 * innersum) * pow(radius, 2);
 }
 
 int main(){
