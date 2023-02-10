@@ -1,20 +1,10 @@
 // 택시 기하학하하하핫
+#define _USE_MATH_DEFINES
 #include <iostream>
 #include <iomanip>
 #include <cmath>
-using namespace std;
 
-/** creating approximate value of pi.*/
-long double creating_eucli_area(int radius){
-   long double innersum = 0;
-   for(int i = 1; i < 10000000; i++){
-      if (i % 2 == 1) 
-         innersum += (1 /(long double)(2*i - 1));
-      else 
-         innersum -= (1 /(long double)(2*i - 1));
-   }
-   return (4 * innersum) * pow(radius, 2);
-}
+using namespace std;
 
 int main(){
    ios::sync_with_stdio(false);
@@ -24,7 +14,7 @@ int main(){
    int radius;
    cin >> radius;
 
-   long double eucli_area = creating_eucli_area(radius);
+   long double eucli_area = (long double)M_PI * (long double)pow(radius, 2);
    double taxi_area = 2 * pow(radius, 2);
    
    // output up to 6 decimal places
