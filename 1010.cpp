@@ -1,12 +1,17 @@
 #include <iostream>
 using namespace std;
 int T;
-int combination(int n, int r){
-   if(n == r || r == 0) 
-      return 1; 
-   else 
-      return combination(n - 1, r - 1) + combination(n - 1, r);
+
+long nCr(int n, int r)
+{
+   long output = 1;
+   for(int i = 0; i < r; i++){
+      output = output * (n - i);
+      output = output / (1 + i);
+   }
+   return output;
 }
+
 int main(){
    ios::sync_with_stdio(false);
    cin.tie(NULL);
@@ -16,6 +21,8 @@ int main(){
    while(T--){
       int a, b;
       cin >> a >> b;
-      cout << combination(b, a) << endl;
+      cout << nCr(b, a) << "\n";
    }
+
+   return 0;
 }
