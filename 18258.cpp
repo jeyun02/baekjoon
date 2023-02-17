@@ -29,40 +29,40 @@ int main(void){
       {    //pop 명령어 일때. 
          if (!qu.empty()) 
          {
-            cout << qu.front() << endl;
+            cout << qu.front() << "\n";
             qu.pop();
          } 
          else
-            cout << "-1" << endl;
+            cout << "-1" << "\n";
       } 
       
       else if (str == "size") 
       {        //size 명령어 일때. 
-         cout << qu.size() << endl;
+         cout << qu.size() << "\n";
       } 
       
       else if (str == "empty") 
       {    //empty 명령어 일때. 
          if (qu.empty()) 
-            cout << "1" << endl;
+            cout << "1" << "\n";
          else 
-            cout << "0" << endl;
+            cout << "0" << "\n";
       } 
       
       else if (str == "front") 
       {        //front 명령어 일때. 
          if (!qu.empty()) 
-            cout << qu.front() << endl;
+            cout << qu.front() << "\n";
          else 
-            cout << "-1" << endl;
+            cout << "-1" << "\n";
       }
       
       else if (str == "back") 
       {        //back 명령어 일때. 
          if (!qu.empty()) 
-            cout << qu.back() << endl;
+            cout << qu.back() << "\n";
          else 
-            cout << "-1" << endl;
+            cout << "-1" << "\n";
       }
    }
    return 0;
