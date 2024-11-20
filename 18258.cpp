@@ -42,7 +42,7 @@ int main(void){
       } 
       
       else if (str == "empty") 
-      {    //empty 명령어 일때. 
+      {    //empty 명령어 일때
          if (qu.empty()) 
             cout << "1" << "\n";
          else 
